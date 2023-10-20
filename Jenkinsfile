@@ -4,14 +4,14 @@ pipeline {
     stages {
         stage ('scm checkout') {
             steps {
-                script {
-                    gitCheck(
-                        branch: "main",
-                        url: "https://github.com/selvasathis/my-shrdlib-proj.git"
-                    )                    
-                }
+                gitCheck(
+                    branch: "main",
+                    url: "https://github.com/selvasathis/my-shrdlib-proj.git"
+                )
             }
         }
+    }
+}                   
         // stage ('maven clean') {
         //     steps {
         //         script {
@@ -20,5 +20,3 @@ pipeline {
         //         }
         //     }
         // }
-    }
-}
