@@ -5,7 +5,10 @@ pipeline {
         stage ('scm checkout') {
             steps {
                 script {
-                    gitCheck()
+                    gitCheck(
+                        branch: "main",
+                        url: "https://github.com/selvasathis/my-shrdlib-proj.git"
+                    )                    
                 }
             }
         }
